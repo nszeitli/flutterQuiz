@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import  './quiz_page.dart';
+
 
 class LandingPage extends StatelessWidget {
   //A stateless widget is a static widget, nothing will get updated
@@ -7,7 +9,7 @@ class LandingPage extends StatelessWidget {
     return new Material( // this material widget acts like a piece of paper
       color: Colors.greenAccent,
       child: new InkWell(
-        onTap: ()=> print("We tapped the page"),
+        onTap: ()=> Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new QuizPage())),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
