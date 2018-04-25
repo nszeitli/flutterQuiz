@@ -16,7 +16,7 @@ class Quiz{
 
   Question get nextQuestion {
     _currentQuestionIndex++;
-    if(_currentQuestionIndex >= _questions.length) {_currentQuestionIndex = 0; return _questions[_currentQuestionIndex];}
+    if(_currentQuestionIndex >= _questions.length) {return null;}
     else {return _questions[_currentQuestionIndex];}
   }
 
